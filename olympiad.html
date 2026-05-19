@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Олимпиадная математика · Мат³</title>
+  <meta name="description" content="Архив олимпиадных задач для 11 класса, олимпиады из перечня РСОШ, темы олимпиадной математики: теория чисел, комбинаторика, инварианты, геометрия." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="brand">
+      <span class="brand__logo">∑</span>
+      <span>Мат<b style="color:var(--accent-2)">³</b></span>
+    </a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="school.html">Школа и ЕГЭ</a></li>
+      <li><a href="olympiad.html" class="is-active">Олимпиады</a></li>
+      <li><a href="popular.html">Популяризация</a></li>
+    </ul>
+    <div style="display:flex; gap:10px; align-items:center;">
+      <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">☾</button>
+      <button class="nav__burger" id="navBurger" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container hero__inner">
+    <div>
+      <span class="hero__eyebrow" style="color: var(--olympiad);">Раздел · олимпиады</span>
+      <h1 class="hero__title">Олимпиадная математика — <span class="grad">красивые задачи</span> для тех, кто любит думать</h1>
+      <p class="hero__lead">
+        Олимпиадные задачи отличаются от школьных тем, что не требуют от вас знания
+        большого количества формул — но требуют умения думать. Здесь —
+        Всероссийская олимпиада, Турнир городов, олимпиады РСОШ, темы и архив.
+      </p>
+      <div class="hero__actions">
+        <a href="#contests" class="btn btn--primary">Олимпиады</a>
+        <a href="#topics" class="btn btn--ghost">Темы</a>
+        <a href="#archive" class="btn btn--ghost">Архив задач</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat"><div class="stat__value">100+</div><div class="stat__label">лет истории ВсОШ</div></div>
+        <div class="stat"><div class="stat__value">6</div><div class="stat__label">задач на финале IMO</div></div>
+        <div class="stat"><div class="stat__value">5+</div><div class="stat__label">льготных вузов с дипломом</div></div>
+      </div>
+    </div>
+    <div class="hero__art reveal">
+      <img src="images/Pentagram.png" alt="Пентаграмма и золотое сечение" style="background:#0d1228;" />
+    </div>
+  </div>
+</section>
+
+<!-- ===== ОЛИМПИАДЫ ===== -->
+<section class="section" id="contests">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Где соревноваться</span>
+      <h2 class="section__title">Главные олимпиады для 11 класса</h2>
+      <p class="section__lead">
+        Перечень олимпиад РСОШ — официальный список олимпиад, дипломы которых дают
+        льготы при поступлении (БВИ или 100 баллов за ЕГЭ).
+      </p>
+    </div>
+
+    <div class="grid grid--3">
+      <a class="card reveal" href="https://vos.olimpiada.ru" target="_blank" rel="noopener">
+        <div class="card__media">
+          <span class="card__tag card__tag--olympiad">I уровень · РСОШ</span>
+          <img src="images/Russia_coat.png" alt="Всероссийская олимпиада" style="background:#fff; padding: 30px;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Всероссийская олимпиада (ВсОШ)</h3>
+          <p class="card__text">
+            Четыре этапа: школьный, муниципальный, региональный, заключительный.
+            Победители и призёры заключительного этапа поступают <b>без вступительных
+            испытаний</b> в любой вуз страны на профильное направление.
+          </p>
+          <span class="card__cta">vos.olimpiada.ru</span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="https://turgor.ru" target="_blank" rel="noopener">
+        <div class="card__media">
+          <span class="card__tag card__tag--olympiad">для всех</span>
+          <img src="images/Gauss.jpg" alt="Турнир городов" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Турнир городов</h3>
+          <p class="card__text">
+            Международная олимпиада, проходит дважды в год — осенью и весной — в
+            десятках городов мира. Задачи славятся красотой и нестандартностью,
+            не требуют школьных формул, требуют идей.
+          </p>
+          <span class="card__cta">turgor.ru</span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="https://olymp.hse.ru" target="_blank" rel="noopener">
+        <div class="card__media">
+          <span class="card__tag card__tag--olympiad">I уровень · РСОШ</span>
+          <img src="images/Hyperbolic.png" alt="Высшая проба" style="background:#fff; padding: 20px;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">«Высшая проба»</h3>
+          <p class="card__text">
+            Олимпиада НИУ ВШЭ. Два тура: онлайн отборочный и очный заключительный.
+            Дипломы дают льготы при поступлении в ВШЭ и многие другие вузы.
+          </p>
+          <span class="card__cta">olymp.hse.ru</span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="https://pvg.mk.ru" target="_blank" rel="noopener">
+        <div class="card__media">
+          <span class="card__tag card__tag--olympiad">I уровень · РСОШ</span>
+          <img src="images/MSU.jpg" alt="МГУ имени М. В. Ломоносова" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">«Покори Воробьёвы горы»</h3>
+          <p class="card__text">
+            Олимпиада МГУ имени М. В. Ломоносова. Один из самых уважаемых
+            конкурсов для поступления в МГУ. Сильное жюри, красивые задачи.
+          </p>
+          <span class="card__cta">pvg.mk.ru</span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="https://mmo.mccme.ru" target="_blank" rel="noopener">
+        <div class="card__media">
+          <span class="card__tag card__tag--olympiad">для москвичей</span>
+          <img src="images/Mandelbrot.jpg" alt="Московская математическая олимпиада" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Московская математическая олимпиада</h3>
+          <p class="card__text">
+            Одна из старейших и сильнейших олимпиад страны — проводится с 1935 года.
+            Призёры получают льготы при поступлении в МГУ и другие вузы.
+          </p>
+          <span class="card__cta">mmo.mccme.ru</span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="https://olymp.mipt.ru" target="_blank" rel="noopener">
+        <div class="card__media">
+          <span class="card__tag card__tag--olympiad">I уровень · РСОШ</span>
+          <img src="images/Pascal.gif" alt="Физтех" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">«Физтех»</h3>
+          <p class="card__text">
+            Олимпиада МФТИ. Сильна задачами с параметром и стереометрией.
+            Стиль задач близок к ЕГЭ повышенной сложности.
+          </p>
+          <span class="card__cta">olymp.mipt.ru</span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="https://olympiada.spbu.ru" target="_blank" rel="noopener">
+        <div class="card__media">
+          <span class="card__tag card__tag--olympiad">I уровень · РСОШ</span>
+          <img src="images/Mobius.jpg" alt="СПбГУ" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Олимпиада СПбГУ</h3>
+          <p class="card__text">
+            Состязание сильной математической традиции Санкт-Петербургского
+            университета. Особенно интересна задачами по теории чисел и алгебре.
+          </p>
+          <span class="card__cta">olympiada.spbu.ru</span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="https://olymp.kurchatov.ru" target="_blank" rel="noopener">
+        <div class="card__media">
+          <span class="card__tag card__tag--olympiad">II уровень · РСОШ</span>
+          <img src="images/Icosahedron.png" alt="Курчатов" style="background:#fff; padding: 20px;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Курчатовская олимпиада</h3>
+          <p class="card__text">
+            Олимпиада НИЦ «Курчатовский институт». Хороший формат, разумные
+            задачи, льготы во многие технические вузы.
+          </p>
+          <span class="card__cta">olymp.kurchatov.ru</span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="https://www.imo-official.org" target="_blank" rel="noopener">
+        <div class="card__media">
+          <span class="card__tag card__tag--olympiad">международная</span>
+          <img src="images/IMO.png" alt="IMO" style="background:#fff; padding: 30px;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">IMO — Международная олимпиада</h3>
+          <p class="card__text">
+            Высшая ступень для школьников: ежегодно соревнуются сборные сотни
+            стран. Решают шесть задач за два дня по 4 часа 30 минут. Российская
+            команда стабильно входит в число сильнейших.
+          </p>
+          <span class="card__cta">imo-official.org</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ТЕМЫ ===== -->
+<section class="section" id="topics">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">О чём думают олимпиадники</span>
+      <h2 class="section__title">Темы олимпиадной математики</h2>
+      <p class="section__lead">
+        Школьная программа и олимпиадные темы — почти не пересекаются. На
+        олимпиаде вам пригодятся другие инструменты.
+      </p>
+    </div>
+
+    <div class="grid grid--2">
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Ulam.png" alt="Спираль Улама — распределение простых чисел" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Теория чисел</h3>
+          <p class="card__text">
+            Делимость, простые числа, наибольший общий делитель, алгоритм Евклида,
+            сравнения по модулю. Малая теорема Ферма, теорема Эйлера, китайская
+            теорема об остатках.
+          </p>
+          <div class="formula"><span class="formula__label">Малая теорема Ферма</span><span class="kx">a^{p-1} \equiv 1 \pmod{p},\quad p \text{ — простое},\ \gcd(a,p)=1</span></div>
+          <div class="pills">
+            <span class="pill">делимость</span>
+            <span class="pill">сравнения</span>
+            <span class="pill">диофантовы уравнения</span>
+            <span class="pill">p-адика</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Pascal.gif" alt="Треугольник Паскаля" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Комбинаторика</h3>
+          <p class="card__text">
+            Принципы Дирихле и включений-исключений, биномиальные коэффициенты,
+            числа Каталана, рекуррентные соотношения, производящие функции,
+            экстремальные задачи (комбинаторика на множествах).
+          </p>
+          <div class="formula"><span class="formula__label">Принцип Дирихле</span><span class="kx">\text{Если } n+1 \text{ кролик в } n \text{ клетках — найдётся клетка с} \geq 2.</span></div>
+          <div class="pills">
+            <span class="pill">Дирихле</span>
+            <span class="pill">включения–исключения</span>
+            <span class="pill">биекции</span>
+            <span class="pill">оценка + пример</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Graph.png" alt="Граф" style="background:#fff; padding: 20px;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Графы</h3>
+          <p class="card__text">
+            Вершины, рёбра, степени, дерево, цикл, эйлеров и гамильтонов обход.
+            Двудольные графы, раскраска, теорема Холла. Турниры — рёберно-ориентированные графы.
+          </p>
+          <div class="formula"><span class="formula__label">Теорема о рукопожатиях</span><span class="kx">\sum_{v} \deg(v) = 2|E|</span></div>
+          <div class="pills">
+            <span class="pill">эйлеровость</span>
+            <span class="pill">раскраска</span>
+            <span class="pill">паросочетания</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Knights.gif" alt="Обход конём — пример инварианта" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Инварианты и полуинварианты</h3>
+          <p class="card__text">
+            Главная идея: придумать величину, которая <i>не меняется</i> при
+            разрешённых действиях. Раскраски, чётности, остатки — частые
+            инварианты. Полуинварианты доказывают конечность процесса.
+          </p>
+          <div class="pills">
+            <span class="pill">раскраски</span>
+            <span class="pill">чётность</span>
+            <span class="pill">обратный ход</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Inversion.png" alt="Инверсия — геометрическое преобразование" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Геометрия (проективная и инверсная)</h3>
+          <p class="card__text">
+            Олимпиадная геометрия не ограничена школьной планиметрией: к ней
+            добавляются гомотетия, инверсия, степень точки, радикальная ось,
+            проективные преобразования.
+          </p>
+          <div class="formula"><span class="formula__label">Степень точки</span><span class="kx">\text{pow}(P) = PA \cdot PB = OP^2 - R^2</span></div>
+          <div class="pills">
+            <span class="pill">подобие</span>
+            <span class="pill">инверсия</span>
+            <span class="pill">проективная геометрия</span>
+            <span class="pill">векторы</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Polynomial3.png" alt="Многочлен 3-й степени" style="background:#fff; padding: 20px;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Алгебра и многочлены</h3>
+          <p class="card__text">
+            Симметрические многочлены, теорема Виета, рациональные корни,
+            делимость многочленов, теорема Безу, неравенства (Коши,
+            Иенсена, перестановочные).
+          </p>
+          <div class="formula"><span class="formula__label">Неравенство Коши</span><span class="kx">\dfrac{a_1+\dots+a_n}{n} \geq \sqrt[n]{a_1\cdots a_n}</span></div>
+          <div class="pills">
+            <span class="pill">Виета</span>
+            <span class="pill">неравенства</span>
+            <span class="pill">тождества</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== АРХИВ ===== -->
+<section class="section" id="archive">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Прошлые годы</span>
+      <h2 class="section__title">Архив олимпиадных заданий</h2>
+      <p class="section__lead">
+        Несколько подборок задач 11-классникам разных лет — типичные сюжеты и
+        формулировки. Полные комплекты — на сайтах олимпиад и в задачнике
+        problems.ru.
+      </p>
+    </div>
+
+    <div class="archive">
+      <div class="archive-card reveal">
+        <div class="archive-card__year">2024</div>
+        <div class="archive-card__title">ВсОШ · заключительный · 11 класс</div>
+        <div class="archive-card__meta">Адыгея, 25–30 апреля 2024</div>
+        <ul class="archive-card__list">
+          <li>1 · Неравенство с тригонометрией</li>
+          <li>2 · Геометрия — окружности и хорды</li>
+          <li>3 · Теория чисел: степени и остатки</li>
+          <li>4 · Графы — раскраска вершин</li>
+          <li>5 · Многочлены и комбинаторика</li>
+        </ul>
+      </div>
+
+      <div class="archive-card reveal">
+        <div class="archive-card__year">2023</div>
+        <div class="archive-card__title">ВсОШ · заключительный · 11 класс</div>
+        <div class="archive-card__meta">Москва, 25–30 апреля 2023</div>
+        <ul class="archive-card__list">
+          <li>1 · Алгебра — система уравнений</li>
+          <li>2 · Планиметрия — вписанная окружность</li>
+          <li>3 · Комбинаторика — раскраска клеток</li>
+          <li>4 · Теория чисел — простые множители</li>
+        </ul>
+      </div>
+
+      <div class="archive-card reveal">
+        <div class="archive-card__year">2022</div>
+        <div class="archive-card__title">ВсОШ · заключительный · 11 класс</div>
+        <div class="archive-card__meta">Уфа</div>
+        <ul class="archive-card__list">
+          <li>1 · Неравенство — оценка + пример</li>
+          <li>2 · Стереометрия — пирамида</li>
+          <li>3 · Игра двух игроков</li>
+          <li>4 · Многочлен и его корни</li>
+        </ul>
+      </div>
+
+      <div class="archive-card reveal">
+        <div class="archive-card__year">2024</div>
+        <div class="archive-card__title">Турнир городов · 45-й</div>
+        <div class="archive-card__meta">осень 2023 / весна 2024</div>
+        <ul class="archive-card__list">
+          <li>Базовый и сложный варианты</li>
+          <li>Задачи на инварианты</li>
+          <li>Геометрия — конструктивные задачи</li>
+          <li>Комбинаторика чисел</li>
+        </ul>
+      </div>
+
+      <div class="archive-card reveal">
+        <div class="archive-card__year">2024</div>
+        <div class="archive-card__title">Высшая проба · 11 класс</div>
+        <div class="archive-card__meta">заключительный этап, февраль 2024</div>
+        <ul class="archive-card__list">
+          <li>1 · Алгебра — преобразования</li>
+          <li>2 · Уравнения с параметром</li>
+          <li>3 · Геометрия — четырёхугольники</li>
+          <li>4–5 · Комбинаторика и теория чисел</li>
+        </ul>
+      </div>
+
+      <div class="archive-card reveal">
+        <div class="archive-card__year">2024</div>
+        <div class="archive-card__title">Москва · 87-я ММО</div>
+        <div class="archive-card__meta">март 2024</div>
+        <ul class="archive-card__list">
+          <li>Шесть задач от классики до олимпиадной высшей пробы</li>
+          <li>Большая роль геометрии</li>
+          <li>Длинные жюри-комментарии в книжке</li>
+        </ul>
+      </div>
+
+      <div class="archive-card reveal">
+        <div class="archive-card__year">2023</div>
+        <div class="archive-card__title">IMO · Япония</div>
+        <div class="archive-card__meta">64-я международная олимпиада, Чиба</div>
+        <ul class="archive-card__list">
+          <li>3 задачи в день × 2 дня</li>
+          <li>Задача 4 — геометрия с медианой</li>
+          <li>Задача 5 — теория чисел</li>
+          <li>Задача 6 — комбинаторика</li>
+        </ul>
+      </div>
+
+      <div class="archive-card reveal">
+        <div class="archive-card__year">2021</div>
+        <div class="archive-card__title">ВсОШ · заключительный · 11 класс</div>
+        <div class="archive-card__meta">Москва</div>
+        <ul class="archive-card__list">
+          <li>1 · Симметричный многочлен</li>
+          <li>2 · Геометрия — серединный перпендикуляр</li>
+          <li>3 · Комбинаторная задача про турниры</li>
+          <li>4 · Теория чисел — НОК и НОД</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 40px;">
+      <a href="https://problems.ru" target="_blank" rel="noopener" class="btn btn--ghost">Полный архив задач — problems.ru</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== КЛАССИЧЕСКИЕ ЗАДАЧИ ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Жемчужины</span>
+      <h2 class="section__title">Классические олимпиадные задачи</h2>
+      <p class="section__lead">
+        Эти задачи стали именами нарицательными. Если вы дойдёте до их понимания
+        — ваш математический опыт уже значительный.
+      </p>
+    </div>
+
+    <div class="task reveal">
+      <span class="task__num">Теория чисел · классика</span>
+      <p class="task__text">
+        <b>Задача.</b> Докажите, что среди любых <span class="kx">n+1</span> чисел из множества
+        <span class="kx">\{1, 2, \ldots, 2n\}</span> найдутся два, одно из которых делит другое.
+      </p>
+      <div class="task__solution">
+        <strong>Идея.</strong> Каждое число <span class="kx">k \in \{1,\dots,2n\}</span> представим как
+        <span class="kx">k = 2^s \cdot m</span>, где <span class="kx">m</span> — нечётное. Возможных нечётных
+        <span class="kx">m</span> в этом диапазоне — ровно <span class="kx">n</span> штук
+        (<span class="kx">1, 3, 5, \ldots, 2n-1</span>). По принципу Дирихле, среди <span class="kx">n+1</span> чисел
+        найдутся два с одинаковым <span class="kx">m</span>: <span class="kx">a = 2^{s_1} m,\ b = 2^{s_2} m</span>.
+        Меньшее из них делит большее.
+      </div>
+    </div>
+
+    <div class="task reveal">
+      <span class="task__num">Комбинаторика · принцип Дирихле</span>
+      <p class="task__text">
+        <b>Задача.</b> В классе 30 учеников. Все они любят по три из пяти видов спорта
+        (плавание, бег, шахматы, лыжи, теннис). Докажите, что найдутся хотя бы три
+        ученика, которые любят одни и те же три вида спорта.
+      </p>
+      <div class="task__solution">
+        <strong>Идея.</strong> Количество способов выбрать 3 вида из 5 равно
+        <span class="kx">C_5^3 = 10</span>. Если бы каждое «трио» спортов встречалось не более чем
+        у двух учеников, всего учеников было бы не более <span class="kx">2 \cdot 10 = 20 < 30</span>.
+        Противоречие — значит, какое-то трио выбрано хотя бы тремя учениками.
+      </div>
+    </div>
+
+    <div class="task reveal">
+      <span class="task__num">Геометрия · степень точки</span>
+      <p class="task__text">
+        <b>Задача.</b> На сторонах <span class="kx">AB</span> и <span class="kx">AC</span> треугольника
+        отмечены точки <span class="kx">M</span> и <span class="kx">N</span> так, что
+        <span class="kx">AM \cdot AB = AN \cdot AC</span>. Докажите, что точки <span class="kx">B, C, M, N</span> лежат на одной окружности.
+      </p>
+      <div class="task__solution">
+        <strong>Идея.</strong> Условие
+        <span class="kx">AM \cdot AB = AN \cdot AC</span> — это в точности равенство <i>степеней
+        точки</i> <span class="kx">A</span> относительно двух пар: <span class="kx">(M,B)</span> и <span class="kx">(N,C)</span>.
+        А степень точки относительно окружности однозначно определяет окружность,
+        проходящую через эти точки.
+      </div>
+    </div>
+
+    <div class="task reveal">
+      <span class="task__num">Инварианты · легендарная задача</span>
+      <p class="task__text">
+        <b>Задача.</b> На шахматной доске 8×8 вырезаны две противоположные угловые
+        клетки. Можно ли замостить оставшиеся 62 клетки 31 доминошкой 1×2?
+      </p>
+      <div class="task__solution">
+        <strong>Идея (инвариант).</strong> Раскрасим доску в шахматном порядке. Противоположные
+        углы — одного цвета (например, оба белые). После вырезания осталось 32 чёрных
+        и 30 белых клеток. Каждая доминошка покрывает <i>одну белую и одну чёрную</i>.
+        Значит, 31 доминошка покрывает 31 белую — но их 30. <strong>Замостить нельзя.</strong>
+      </div>
+    </div>
+
+    <div class="task reveal">
+      <span class="task__num">Алгебра · неравенство</span>
+      <p class="task__text">
+        <b>Задача.</b> Докажите, что для положительных <span class="kx">a, b, c</span>:
+        <span class="kx">\dfrac{a}{b+c} + \dfrac{b}{c+a} + \dfrac{c}{a+b} \geq \dfrac{3}{2}</span> (неравенство Несбитта).
+      </p>
+      <div class="task__solution">
+        <strong>Идея.</strong> Прибавим к каждой дроби 1:
+        <span class="kx">\sum \dfrac{a+b+c}{b+c} = (a+b+c)\sum \dfrac{1}{b+c}</span>.
+        По неравенству между средним арифметическим и гармоническим:
+        <span class="kx">\dfrac{1}{b+c}+\dfrac{1}{c+a}+\dfrac{1}{a+b} \geq \dfrac{9}{2(a+b+c)}</span>,
+        откуда сумма <span class="kx">\geq \dfrac{9}{2}</span>, и исходное выражение <span class="kx">\geq \dfrac{3}{2}</span>.
+      </div>
+    </div>
+
+    <div class="task reveal">
+      <span class="task__num">Геометрия · знаменитая</span>
+      <p class="task__text">
+        <b>Задача.</b> Внутри треугольника <span class="kx">ABC</span> выбрана точка <span class="kx">P</span>.
+        Докажите, что хотя бы один из углов <span class="kx">\angle PAB,\ \angle PBC,\ \angle PCA</span> не превосходит <span class="kx">30^\circ</span>.
+      </p>
+      <div class="task__solution">
+        <strong>Идея.</strong> Это знаменитая задача с IMO 1991. От противного: если все три угла больше <span class="kx">30^\circ</span>,
+        то по теореме синусов в трёх вспомогательных треугольниках получаем оценки, противоречащие соотношениям сторон.
+        Аккуратное доказательство использует тригонометрию и неравенства о произведении синусов.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ПЕРСОНЫ ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Звёзды олимпиадной математики</span>
+      <h2 class="section__title">Кто решал то, что не решал никто</h2>
+    </div>
+
+    <div class="persons">
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Perelman.jpg" alt="Григорий Перельман" />
+        </div>
+        <div class="person__name">Григорий Перельман</div>
+        <div class="person__years">р. 1966 · Россия</div>
+        <div class="person__quote">Двукратный победитель ВсОШ и золото IMO с абсолютным результатом (1982). Доказал гипотезу Пуанкаре.</div>
+      </div>
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Tao.svg" alt="Теренс Тао" />
+        </div>
+        <div class="person__name">Теренс Тао</div>
+        <div class="person__years">р. 1975 · Австралия</div>
+        <div class="person__quote">В 13 лет — золото IMO. Сейчас — один из самых сильных живых математиков, филдсовский лауреат.</div>
+      </div>
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Erdos.jpg" alt="Пол Эрдёш" />
+        </div>
+        <div class="person__name">Пол Эрдёш</div>
+        <div class="person__years">1913–1996 · Венгрия</div>
+        <div class="person__quote">«Математик — это машина, превращающая кофе в теоремы». Соавтор более 1500 статей.</div>
+      </div>
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Kolmogorov.svg" alt="Андрей Колмогоров" />
+        </div>
+        <div class="person__name">Андрей Колмогоров</div>
+        <div class="person__years">1903–1987 · Россия</div>
+        <div class="person__quote">Один из создателей советской математической школы и системы олимпиад в СССР.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ЦИТАТА ===== -->
+<section class="section">
+  <div class="container">
+    <div class="quote reveal">
+      Олимпиадная задача — это маленькое произведение искусства. Её красота
+      в том, что ответ короткий и неожиданный, а путь к нему требует не знания, а
+      идеи. Идеи учатся не на лекциях, а на других задачах.
+      <span class="quote__author">— Из методички мехмата МГУ</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== РЕСУРСЫ ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Где брать задачи</span>
+      <h2 class="section__title">Внешние ресурсы для олимпиадников</h2>
+    </div>
+    <div class="grid grid--3">
+      <a href="https://problems.ru" target="_blank" rel="noopener" class="card reveal">
+        <div class="card__body" style="padding: 28px;">
+          <h3 class="card__title">Problems.ru</h3>
+          <p class="card__text">Огромный задачник МЦНМО: десятки тысяч задач по темам и уровням сложности, с решениями.</p>
+          <span class="card__cta">Перейти</span>
+        </div>
+      </a>
+      <a href="https://artofproblemsolving.com" target="_blank" rel="noopener" class="card reveal">
+        <div class="card__body" style="padding: 28px;">
+          <h3 class="card__title">AoPS — Art of Problem Solving</h3>
+          <p class="card__text">Главное мировое сообщество олимпиадников. Форум, вики, учебники, прошлые IMO, USAMO.</p>
+          <span class="card__cta">Перейти</span>
+        </div>
+      </a>
+      <a href="https://www.mccme.ru" target="_blank" rel="noopener" class="card reveal">
+        <div class="card__body" style="padding: 28px;">
+          <h3 class="card__title">МЦНМО</h3>
+          <p class="card__text">Московский центр непрерывного математического образования: книги, кружки, олимпиады.</p>
+          <span class="card__cta">Перейти</span>
+        </div>
+      </a>
+      <a href="https://olimpiada.ru" target="_blank" rel="noopener" class="card reveal">
+        <div class="card__body" style="padding: 28px;">
+          <h3 class="card__title">Olimpiada.ru</h3>
+          <p class="card__text">Агрегатор олимпиад: календарь, перечень РСОШ, новости, статистика дипломов.</p>
+          <span class="card__cta">Перейти</span>
+        </div>
+      </a>
+      <a href="https://www.imo-official.org/problems.aspx" target="_blank" rel="noopener" class="card reveal">
+        <div class="card__body" style="padding: 28px;">
+          <h3 class="card__title">Архив IMO</h3>
+          <p class="card__text">Все задачи Международной олимпиады с 1959 года в pdf, с решениями участников и жюри.</p>
+          <span class="card__cta">Перейти</span>
+        </div>
+      </a>
+      <a href="https://www.turgor.ru" target="_blank" rel="noopener" class="card reveal">
+        <div class="card__body" style="padding: 28px;">
+          <h3 class="card__title">Турнир городов · архив</h3>
+          <p class="card__text">Все варианты Турнира городов с 1980 года, базовый и сложный варианты, решения жюри.</p>
+          <span class="card__cta">Перейти</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <div class="brand">
+          <span class="brand__logo">∑</span>
+          <span>Мат<b style="color:var(--accent-2)">³</b></span>
+        </div>
+        <p class="footer__brand-text">
+          Образовательный портал по математике для выпускников. Свободные
+          материалы, ссылки на открытые источники, подборки книг и задач.
+        </p>
+        <p class="footer__brand-text" style="font-size:0.82rem; opacity:0.85; margin-top:10px;">
+          <b style="color:var(--text-2)">Мат³</b> — степень тройки: три автора, три раздела.<br/>
+          <span style="opacity:0.75">Евграфова · Файзрахманова · Никифорова</span>
+        </p>
+      </div>
+      <div class="footer__col">
+        <h4>Разделы</h4>
+        <ul>
+          <li><a href="school.html">Школа и ЕГЭ</a></li>
+          <li><a href="olympiad.html">Олимпиады</a></li>
+          <li><a href="popular.html">Популяризация</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Главные олимпиады</h4>
+        <ul>
+          <li><a href="https://vos.olimpiada.ru" target="_blank" rel="noopener">ВсОШ</a></li>
+          <li><a href="https://turgor.ru" target="_blank" rel="noopener">Турнир городов</a></li>
+          <li><a href="https://olymp.hse.ru" target="_blank" rel="noopener">Высшая проба</a></li>
+          <li><a href="https://pvg.mk.ru" target="_blank" rel="noopener">Покори Воробьёвы горы</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Задачники</h4>
+        <ul>
+          <li><a href="https://problems.ru" target="_blank" rel="noopener">Problems.ru</a></li>
+          <li><a href="https://artofproblemsolving.com" target="_blank" rel="noopener">AoPS</a></li>
+          <li><a href="https://www.mccme.ru" target="_blank" rel="noopener">МЦНМО</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Мат³ · Образовательный портал</span>
+      <span>Изображения · Wikimedia Commons</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="script.js" defer></script>
+</body>
+</html>

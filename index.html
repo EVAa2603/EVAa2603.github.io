@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мат³ — математика для 11 класса: ЕГЭ, олимпиады, популяризация</title>
+  <meta name="description" content="Образовательный портал по математике для 11 класса: материалы школьного курса и подготовки к ЕГЭ, архив олимпиадных задач прошлых лет и популяризационные материалы." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ====================== NAV ====================== -->
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="brand">
+      <span class="brand__logo">∑</span>
+      <span>Мат<b style="color:var(--accent-2)">³</b></span>
+    </a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html" class="is-active">Главная</a></li>
+      <li><a href="school.html">Школа и ЕГЭ</a></li>
+      <li><a href="olympiad.html">Олимпиады</a></li>
+      <li><a href="popular.html">Популяризация</a></li>
+    </ul>
+    <div style="display:flex; gap:10px; align-items:center;">
+      <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">☾</button>
+      <button class="nav__burger" id="navBurger" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ====================== HERO ====================== -->
+<section class="hero">
+  <div class="container hero__inner">
+    <div>
+      <span class="hero__eyebrow">Образовательный портал · 11 класс</span>
+      <h1 class="hero__title">Математика — это <span class="grad">язык, на котором написана Вселенная</span></h1>
+      <p class="hero__lead">
+        Подготовка к ЕГЭ, олимпиадные задачи прошлых лет и научно-популярные
+        материалы для тех, кто учится в 11 классе и любит думать. Книги,
+        формулы, портреты великих — всё в одном месте.
+      </p>
+      <div class="hero__actions">
+        <a href="school.html" class="btn btn--primary">Начать со школьного курса</a>
+        <a href="popular.html" class="btn btn--ghost">Чем красива математика?</a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <div class="stat__value">19</div>
+          <div class="stat__label">заданий профильного ЕГЭ</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value">4</div>
+          <div class="stat__label">этапа Всероссийской олимпиады</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value">∞</div>
+          <div class="stat__label">вопросов без ответа</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__art reveal">
+      <img src="images/Mandelbrot.jpg" alt="Множество Мандельброта — символ современной математики" />
+    </div>
+  </div>
+</section>
+
+<!-- ====================== РАЗДЕЛЫ ====================== -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Три направления</span>
+      <h2 class="section__title">Что вы найдёте на сайте</h2>
+      <p class="section__lead">
+        Три равноценных раздела — для систематической учёбы, для интеллектуальных
+        вызовов и для просто увидеть, насколько математика красива.
+      </p>
+    </div>
+
+    <div class="grid grid--3">
+      <a class="card reveal" href="school.html">
+        <div class="card__media">
+          <span class="card__tag card__tag--school">Школа · ЕГЭ</span>
+          <img src="images/Trig.png" alt="Тригонометрические функции" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Школьный курс и ЕГЭ</h3>
+          <p class="card__text">
+            Полный разбор программы 11 класса: алгебра, начала анализа,
+            стереометрия, тригонометрия. Структура ЕГЭ-2026, типовые задания
+            1–19, учебники и сборники.
+          </p>
+          <span class="card__cta">Открыть раздел</span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="olympiad.html">
+        <div class="card__media">
+          <span class="card__tag card__tag--olympiad">Олимпиады</span>
+          <img src="images/Pentagram.png" alt="Пентаграмма и золотое сечение" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Олимпиадная математика</h3>
+          <p class="card__text">
+            Архив задач ВсОШ, Турнира городов, «Высшей пробы», «Покори
+            Воробьёвы горы». Теория чисел, комбинаторика, инварианты,
+            проективная геометрия.
+          </p>
+          <span class="card__cta">Открыть раздел</span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="popular.html">
+        <div class="card__media">
+          <span class="card__tag card__tag--popular">Популяризация</span>
+          <img src="images/Mobius.jpg" alt="Лента Мёбиуса" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Просветительская математика</h3>
+          <p class="card__text">
+            Фракталы, бесконечность, теорема Гёделя, гипотеза Пуанкаре,
+            великие математики, книги Перельмана и Гарднера, каналы и лекции
+            для широкой аудитории.
+          </p>
+          <span class="card__cta">Открыть раздел</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== FEATURED — ЦИТАТА ====================== -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="feature-card reveal">
+      <div class="feature-card__media">
+        <img src="images/Euler.jpg" alt="Леонард Эйлер" />
+      </div>
+      <div class="feature-card__body">
+        <span class="section__eyebrow">Леонард Эйлер · 1707–1783</span>
+        <h3>«Математика — царица наук»</h3>
+        <p>
+          Эйлер написал около 850 работ и оставил формулы, которые мы используем
+          до сих пор. Самое известное равенство, связывающее пять
+          фундаментальных констант, носит его имя:
+        </p>
+        <div class="formula">
+          <span class="formula__label">Тождество Эйлера</span>
+          <span class="kx">e^{i\pi} + 1 = 0</span>
+        </div>
+        <p>
+          В 11 классе вы встретитесь с производной, интегралом, показательной
+          функцией — все эти понятия по сути отшлифовал именно Эйлер.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== ГАЛЕРЕЯ ====================== -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Визуальная математика</span>
+      <h2 class="section__title">Образы вместо формул</h2>
+      <p class="section__lead">
+        Иногда одна картинка объясняет идею быстрее, чем страница текста. Наведите
+        курсор, чтобы узнать, что изображено.
+      </p>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery__item gallery__item--tall" data-caption="Множество Мандельброта — фрактал, бесконечно повторяющий сам себя">
+        <img src="images/Mandelbrot.jpg" alt="Множество Мандельброта" />
+      </div>
+      <div class="gallery__item gallery__item--wide" data-caption="Треугольник Паскаля — биномиальные коэффициенты">
+        <img src="images/Pascal.gif" alt="Треугольник Паскаля" />
+      </div>
+      <div class="gallery__item" data-caption="Спираль Фибоначчи в природе">
+        <img src="images/Nautilus.png" alt="Спираль Фибоначчи" />
+      </div>
+      <div class="gallery__item" data-caption="Тор — поверхность с дыркой">
+        <img src="images/Torus.png" alt="Тор" />
+      </div>
+      <div class="gallery__item" data-caption="Бутылка Клейна — поверхность без внутри и снаружи">
+        <img src="images/Klein.png" alt="Бутылка Клейна" />
+      </div>
+      <div class="gallery__item gallery__item--wide" data-caption="Икосаэдр — один из пяти правильных многогранников">
+        <img src="images/Icosahedron.png" alt="Икосаэдр" />
+      </div>
+      <div class="gallery__item" data-caption="Лента Мёбиуса — поверхность с одной стороной">
+        <img src="images/Mobius.jpg" alt="Лента Мёбиуса" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== ВЕЛИКИЕ МАТЕМАТИКИ ====================== -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Те, кто стоят за формулами</span>
+      <h2 class="section__title">Великие математики</h2>
+      <p class="section__lead">
+        За каждой формулой школьного учебника — десятилетия мысли и характеры
+        совершенно живых людей.
+      </p>
+    </div>
+
+    <div class="persons">
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Euler.jpg" alt="Леонард Эйлер" />
+        </div>
+        <div class="person__name">Леонард Эйлер</div>
+        <div class="person__years">1707–1783</div>
+        <div class="person__quote">«Господа, у меня есть доказательство — следовательно, Бог существует».</div>
+      </div>
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Gauss.jpg" alt="Карл Фридрих Гаусс" />
+        </div>
+        <div class="person__name">К. Ф. Гаусс</div>
+        <div class="person__years">1777–1855</div>
+        <div class="person__quote">«Математика — царица наук, арифметика — царица математики».</div>
+      </div>
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Newton.jpg" alt="Исаак Ньютон" />
+        </div>
+        <div class="person__name">Исаак Ньютон</div>
+        <div class="person__years">1643–1727</div>
+        <div class="person__quote">«Если я видел дальше других, то потому, что стоял на плечах гигантов».</div>
+      </div>
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Kovalevskaya.jpg" alt="Софья Ковалевская" />
+        </div>
+        <div class="person__name">Софья Ковалевская</div>
+        <div class="person__years">1850–1891</div>
+        <div class="person__quote">«Нельзя быть математиком, не будучи в то же время и поэтом в душе».</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CTA ====================== -->
+<section class="section">
+  <div class="container">
+    <div class="cta reveal">
+      <div>
+        <span class="section__eyebrow">С чего начать?</span>
+        <h2 class="mt-0">Если вы готовитесь к ЕГЭ — начните со школьного курса. Если ищете вызов — идите в олимпиады. Если хотите понять, зачем всё это — в популяризацию.</h2>
+        <p>Все три раздела связаны между собой ссылками. Никакой регистрации, всё бесплатно.</p>
+      </div>
+      <div style="display:flex; flex-direction: column; gap: 12px;">
+        <a href="school.html" class="btn btn--primary">Школьный курс</a>
+        <a href="olympiad.html" class="btn btn--ghost">Олимпиады</a>
+        <a href="popular.html" class="btn btn--ghost">Популяризация</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <div class="brand">
+          <span class="brand__logo">∑</span>
+          <span>Мат<b style="color:var(--accent-2)">³</b></span>
+        </div>
+        <p class="footer__brand-text">
+          Образовательный портал по математике для выпускников. Свободные
+          материалы, ссылки на открытые источники, подборки книг и задач.
+        </p>
+        <p class="footer__brand-text" style="font-size:0.82rem; opacity:0.85; margin-top:10px;">
+          <b style="color:var(--text-2)">Мат³</b> — степень тройки: три автора, три раздела.<br/>
+          <span style="opacity:0.75">Евграфова · Файзрахманова · Никифорова</span>
+        </p>
+      </div>
+      <div class="footer__col">
+        <h4>Разделы</h4>
+        <ul>
+          <li><a href="school.html">Школа и ЕГЭ</a></li>
+          <li><a href="olympiad.html">Олимпиады</a></li>
+          <li><a href="popular.html">Популяризация</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Полезные ссылки</h4>
+        <ul>
+          <li><a href="https://fipi.ru" target="_blank" rel="noopener">ФИПИ · банк заданий ЕГЭ</a></li>
+          <li><a href="https://mathege.ru" target="_blank" rel="noopener">Мат-ЕГЭ · Ященко</a></li>
+          <li><a href="https://problems.ru" target="_blank" rel="noopener">Problems.ru · задачник</a></li>
+          <li><a href="https://www.etudes.ru" target="_blank" rel="noopener">Математические этюды</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Олимпиады</h4>
+        <ul>
+          <li><a href="https://olimpiada.ru" target="_blank" rel="noopener">Olimpiada.ru · агрегатор</a></li>
+          <li><a href="https://vos.olimpiada.ru" target="_blank" rel="noopener">ВсОШ — Всероссийская</a></li>
+          <li><a href="https://olymp.hse.ru" target="_blank" rel="noopener">Высшая проба (ВШЭ)</a></li>
+          <li><a href="https://pvg.mk.ru" target="_blank" rel="noopener">Покори Воробьёвы горы</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Мат³ · Образовательный портал</span>
+      <span>Изображения · Wikimedia Commons</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="script.js" defer></script>
+</body>
+</html>

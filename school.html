@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Школьный курс и ЕГЭ · Мат³</title>
+  <meta name="description" content="Программа 11 класса по математике, структура ЕГЭ профильного уровня, темы, типовые задания, разборы и учебники." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="brand">
+      <span class="brand__logo">∑</span>
+      <span>Мат<b style="color:var(--accent-2)">³</b></span>
+    </a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="school.html" class="is-active">Школа и ЕГЭ</a></li>
+      <li><a href="olympiad.html">Олимпиады</a></li>
+      <li><a href="popular.html">Популяризация</a></li>
+    </ul>
+    <div style="display:flex; gap:10px; align-items:center;">
+      <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">☾</button>
+      <button class="nav__burger" id="navBurger" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container hero__inner">
+    <div>
+      <span class="hero__eyebrow" style="color:var(--school);">Раздел · школьный курс</span>
+      <h1 class="hero__title">Школьный курс и подготовка к <span class="grad">ЕГЭ</span></h1>
+      <p class="hero__lead">
+        Полный обзор программы 11 класса: алгебра и начала анализа, тригонометрия,
+        стереометрия, теория вероятностей. Структура ЕГЭ профильного и базового
+        уровней, разборы заданий, классические учебники.
+      </p>
+      <div class="hero__actions">
+        <a href="#struct" class="btn btn--primary">Структура ЕГЭ</a>
+        <a href="#topics" class="btn btn--ghost">К темам</a>
+        <a href="#tasks" class="btn btn--ghost">Разборы задач</a>
+      </div>
+    </div>
+    <div class="hero__art reveal">
+      <img src="images/Trig.png" alt="Тригонометрические функции" style="background:#fff; padding: 30px;" />
+    </div>
+  </div>
+</section>
+
+<!-- ===== СТРУКТУРА ЕГЭ ===== -->
+<section class="section" id="struct">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">ЕГЭ-2026 · профильный уровень</span>
+      <h2 class="section__title">19 заданий — от арифметики до теории чисел</h2>
+      <p class="section__lead">
+        Профильный ЕГЭ по математике состоит из двух частей: 12 заданий с
+        кратким ответом и 7 заданий с развёрнутым решением. Максимум — 32
+        первичных балла.
+      </p>
+    </div>
+
+    <div class="grid grid--3">
+      <div class="card reveal">
+        <div class="card__media" style="background: linear-gradient(135deg, #38bdf8, #6366f1); display:grid; place-items:center; aspect-ratio: 16/8;">
+          <span style="font-family: 'Source Serif Pro'; font-size: 4rem; color: white; font-weight: 700;">1–12</span>
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Часть 1 — краткий ответ</h3>
+          <p class="card__text">
+            12 заданий базового и повышенного уровня. Планиметрия, окружности,
+            вероятности, текстовые задачи, исследование функций, графики,
+            простейшие уравнения и неравенства, стереометрия.
+          </p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media" style="background: linear-gradient(135deg, #fbbf24, #f97316); display:grid; place-items:center; aspect-ratio: 16/8;">
+          <span style="font-family: 'Source Serif Pro'; font-size: 4rem; color: white; font-weight: 700;">13–19</span>
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Часть 2 — развёрнутое решение</h3>
+          <p class="card__text">
+            7 заданий повышенного и высокого уровня сложности. Тригонометрия,
+            стереометрия, неравенства, экономическая задача, планиметрия,
+            параметр и теория чисел.
+          </p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media" style="background: linear-gradient(135deg, #f472b6, #8b7cf6); display:grid; place-items:center; aspect-ratio: 16/8;">
+          <span style="font-family: 'Source Serif Pro'; font-size: 4rem; color: white; font-weight: 700;">3 ч 55 мин</span>
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Время и оценивание</h3>
+          <p class="card__text">
+            На работу — 235 минут. Можно использовать линейку, справочные
+            материалы. Калькулятор запрещён. Минимум для вуза — обычно 39
+            тестовых баллов.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3 style="margin-bottom: 24px;">Подробно по заданиям</h3>
+    <div class="accordion">
+      <div class="acc-item">
+        <button class="acc-head">Задания 1–2 · Планиметрия и стереометрия (простые)</button>
+        <div class="acc-body">
+          <p>Простые геометрические задачи на знание формул площадей, объёмов, признаков подобия. Цена — 1 балл за каждое.</p>
+          <div class="formula"><span class="formula__label">Площадь треугольника</span><span class="kx">S = \tfrac{1}{2} a h = \tfrac{1}{2} ab\sin\gamma</span></div>
+          <div class="formula"><span class="formula__label">Объём призмы / цилиндра</span><span class="kx">V = S_{\text{осн}} \cdot h</span></div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">Задание 3 · Окружности и стереометрия в координатах</button>
+        <div class="acc-body">
+          <p>Окружности, вписанные/описанные углы, координаты в пространстве.</p>
+          <div class="formula"><span class="formula__label">Вписанный угол</span><span class="kx">\angle ABC = \tfrac{1}{2}\smile AC</span></div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">Задание 4 · Теория вероятностей</button>
+        <div class="acc-body">
+          <p>Классическое определение вероятности, сумма и произведение событий, условная вероятность, формула полной вероятности.</p>
+          <div class="formula"><span class="formula__label">Классическая вероятность</span><span class="kx">P(A) = \dfrac{m}{n}</span></div>
+          <div class="formula"><span class="formula__label">Формула полной вероятности</span><span class="kx">P(A) = \sum_{i=1}^n P(H_i)\,P(A|H_i)</span></div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">Задания 5–6 · Уравнения и значения выражений</button>
+        <div class="acc-body">
+          <p>Простейшие показательные, логарифмические, иррациональные и тригонометрические уравнения. Вычисление значений выражений.</p>
+          <div class="formula"><span class="formula__label">Логарифм</span><span class="kx">\log_a b = c \iff a^c = b,\quad a > 0,\ a \neq 1</span></div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">Задание 7 · Физические величины и формулы</button>
+        <div class="acc-body">
+          <p>Прикладная задача: подставить значения в физическую формулу и решить уравнение/неравенство. Часто — на оптику, механику, термодинамику.</p>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">Задание 8 · Текстовая задача</button>
+        <div class="acc-body">
+          <p>Движение, работа, концентрации, проценты. Сводится к составлению уравнения с одной или двумя переменными.</p>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">Задания 9–10 · Графики и наибольшее/наименьшее значение</button>
+        <div class="acc-body">
+          <p>Производная функции и её геометрический смысл. Находим экстремумы, асимптоты, читаем графики и таблицы.</p>
+          <div class="formula"><span class="formula__label">Геометрический смысл производной</span><span class="kx">f'(x_0) = \tan\alpha = k_{\text{касат.}}</span></div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">Задания 11–12 · Алгебра, тригонометрия, исследование</button>
+        <div class="acc-body">
+          <p>Графики функций (показательной, логарифмической, тригонометрической), параметры графиков, максимум функции на отрезке.</p>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">Задание 13 · Тригонометрическое уравнение</button>
+        <div class="acc-body">
+          <p>Две подзадачи: <b>а)</b> решить уравнение; <b>б)</b> найти корни на отрезке. Часто — отбор корней через единичную окружность.</p>
+          <div class="formula"><span class="formula__label">Основные тригонометрические тождества</span><span class="kx">\sin^2 x + \cos^2 x = 1,\quad \tan x = \dfrac{\sin x}{\cos x}</span></div>
+          <div class="formula"><span class="kx">\sin 2x = 2\sin x\cos x,\quad \cos 2x = 1 - 2\sin^2 x</span></div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">Задание 14 · Стереометрия (доказательство + вычисление)</button>
+        <div class="acc-body">
+          <p>Куб, призма, пирамида, цилиндр, конус, шар. Угол между прямой и плоскостью, между плоскостями, расстояние от точки до плоскости. Эффективны координатно-векторный и геометрический методы.</p>
+          <div class="formula"><span class="formula__label">Угол между прямой и плоскостью</span><span class="kx">\sin\varphi = \dfrac{|\vec n \cdot \vec a|}{|\vec n||\vec a|}</span></div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">Задание 15 · Неравенство</button>
+        <div class="acc-body">
+          <p>Показательное или логарифмическое неравенство. Применяем метод рационализации, замену переменной, интервалов.</p>
+          <div class="formula"><span class="formula__label">Метод рационализации</span><span class="kx">\log_{f(x)} g(x) \vee \log_{f(x)} h(x) \iff (f(x)-1)(g(x)-h(x)) \vee 0</span></div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">Задание 16 · Экономическая задача</button>
+        <div class="acc-body">
+          <p>Кредиты (аннуитетные и дифференцированные платежи), вклады, оптимизация. Требует умения работать с процентами и геометрической прогрессией.</p>
+          <div class="formula"><span class="formula__label">Сложные проценты</span><span class="kx">S_n = S_0\left(1 + \tfrac{p}{100}\right)^n</span></div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">Задание 17 · Планиметрия с доказательством</button>
+        <div class="acc-body">
+          <p>Окружности, четырёхугольники, треугольники. Подобие, теоремы синусов/косинусов, свойства касательных и хорд.</p>
+          <div class="formula"><span class="formula__label">Теорема косинусов</span><span class="kx">c^2 = a^2 + b^2 - 2ab\cos\gamma</span></div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">Задание 18 · Параметр</button>
+        <div class="acc-body">
+          <p>Уравнение или неравенство с параметром. Графический метод, метод областей, исследование функции. Самая «творческая» задача варианта.</p>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head">Задание 19 · Теория чисел</button>
+        <div class="acc-body">
+          <p>Делимость, остатки, перечисление вариантов, оценка + пример. Доказать невозможность или построить конструкцию.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ТЕМЫ ===== -->
+<section class="section" id="topics">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Программа 11 класса</span>
+      <h2 class="section__title">Основные темы курса</h2>
+      <p class="section__lead">
+        Программа выпускного класса — это в основном завершение начал математического анализа и стереометрия.
+      </p>
+    </div>
+
+    <div class="grid grid--2">
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Sine_cosine.png" alt="Графики синуса и косинуса" style="background:#fff; padding: 20px;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Тригонометрия</h3>
+          <p class="card__text">
+            Тригонометрический круг, формулы приведения, основные тождества,
+            формулы суммы/разности и двойного аргумента. Уравнения, неравенства,
+            обратные тригонометрические функции.
+          </p>
+          <div class="pills">
+            <span class="pill">формулы приведения</span>
+            <span class="pill">arcsin · arccos · arctg</span>
+            <span class="pill">отбор корней</span>
+            <span class="pill">метод вспомогательного аргумента</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Tangent.png" alt="Касательная к графику функции" style="background:#fff; padding: 20px;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Производная и её применения</h3>
+          <p class="card__text">
+            Определение производной, таблица производных, правила
+            дифференцирования. Касательная к графику, исследование функций на
+            монотонность и экстремумы, поиск наибольших и наименьших значений.
+          </p>
+          <div class="pills">
+            <span class="pill">правила дифференцирования</span>
+            <span class="pill">касательная</span>
+            <span class="pill">экстремумы</span>
+            <span class="pill">оптимизация</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Integral.png" alt="Определённый интеграл" style="background:#fff; padding: 20px;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Первообразная и интеграл</h3>
+          <p class="card__text">
+            Определение первообразной, неопределённый интеграл, формула
+            Ньютона–Лейбница, площадь криволинейной трапеции. Применение к
+            физическим задачам.
+          </p>
+          <div class="pills">
+            <span class="pill">первообразная</span>
+            <span class="pill">формула Ньютона–Лейбница</span>
+            <span class="pill">площадь фигуры</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Exp_log.png" alt="Показательная и логарифмическая функции" style="background:#fff; padding: 20px;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Показательная и логарифмическая функции</h3>
+          <p class="card__text">
+            Свойства степени с действительным показателем, логарифмы. Графики,
+            уравнения и неравенства. Натуральный логарифм. Связь с производной.
+          </p>
+          <div class="pills">
+            <span class="pill">свойства логарифмов</span>
+            <span class="pill">переход к другому основанию</span>
+            <span class="pill">показательные уравнения</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Polyhedron.png" alt="Многогранник" style="background:#fff; padding: 20px;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Стереометрия</h3>
+          <p class="card__text">
+            Многогранники (призма, пирамида, параллелепипед), тела вращения
+            (цилиндр, конус, шар). Объёмы и поверхности. Координатно-векторный
+            метод как универсальный инструмент.
+          </p>
+          <div class="pills">
+            <span class="pill">призма и пирамида</span>
+            <span class="pill">цилиндр · конус · шар</span>
+            <span class="pill">сечения</span>
+            <span class="pill">векторы</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Normal.png" alt="Нормальное распределение" style="background:#fff; padding: 20px;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Теория вероятностей и статистика</h3>
+          <p class="card__text">
+            Классическое и геометрическое определение вероятности. События и
+            операции над ними. Условная вероятность, формула полной вероятности,
+            формула Байеса. Случайные величины.
+          </p>
+          <div class="pills">
+            <span class="pill">независимые события</span>
+            <span class="pill">условная вероятность</span>
+            <span class="pill">Байес</span>
+            <span class="pill">биномиальное распределение</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== РАЗБОРЫ ЗАДАЧ ===== -->
+<section class="section" id="tasks">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Разборы</span>
+      <h2 class="section__title">Типовые задачи с решениями</h2>
+      <p class="section__lead">
+        Несколько характерных задач из реальных вариантов разных лет — чтобы
+        увидеть формат и логику разбора.
+      </p>
+    </div>
+
+    <div class="task reveal">
+      <span class="task__num">Задание 4 · Вероятность</span>
+      <div class="task__text">
+        <p>В кармане 3 красных и 5 синих шарика. Наугад вытаскивают два шарика подряд без возвращения. Найдите вероятность того, что оба шарика — красные.</p>
+      </div>
+      <div class="task__solution">
+        <strong>Решение.</strong> Вероятность того, что первый шарик красный, равна
+        <span class="kx">P(K_1) = \tfrac{3}{8}</span>. После этого красных осталось 2 из 7, поэтому
+        <span class="kx">P(K_2 | K_1) = \tfrac{2}{7}</span>. По формуле умножения:
+        <div class="formula"><span class="kx">P(K_1 \cap K_2) = \tfrac{3}{8} \cdot \tfrac{2}{7} = \tfrac{6}{56} = \tfrac{3}{28} \approx 0{,}107</span></div>
+        <strong>Ответ:</strong> 0,107.
+      </div>
+    </div>
+
+    <div class="task reveal">
+      <span class="task__num">Задание 13 · Тригонометрическое уравнение</span>
+      <div class="task__text">
+        <p><b>а)</b> Решите уравнение: <span class="kx">2\sin^2 x + 3\cos x - 3 = 0</span>.<br/>
+           <b>б)</b> Найдите все корни на отрезке <span class="kx">\left[-\pi;\,\tfrac{\pi}{2}\right]</span>.</p>
+      </div>
+      <div class="task__solution">
+        <strong>Решение.</strong> Используем основное тождество <span class="kx">\sin^2 x = 1 - \cos^2 x</span>:
+        <div class="formula"><span class="kx">2(1-\cos^2 x) + 3\cos x - 3 = 0 \iff -2\cos^2 x + 3\cos x - 1 = 0</span></div>
+        Замена <span class="kx">t = \cos x</span>, <span class="kx">t \in [-1;1]</span>:
+        <div class="formula"><span class="kx">2t^2 - 3t + 1 = 0 \implies t_1 = 1,\ t_2 = \tfrac{1}{2}</span></div>
+        Отсюда: <span class="kx">\cos x = 1 \Rightarrow x = 2\pi k</span> или <span class="kx">\cos x = \tfrac{1}{2} \Rightarrow x = \pm\tfrac{\pi}{3}+2\pi k</span>.<br/>
+        <strong>Отбор на отрезке:</strong> <span class="kx">x = 0,\ x = \tfrac{\pi}{3},\ x = -\tfrac{\pi}{3}</span>.
+      </div>
+    </div>
+
+    <div class="task reveal">
+      <span class="task__num">Задание 15 · Логарифмическое неравенство</span>
+      <div class="task__text">
+        <p>Решите неравенство: <span class="kx">\log_{x-1}(x+2) \geq 1</span>.</p>
+      </div>
+      <div class="task__solution">
+        <strong>Решение.</strong> Применим метод рационализации. Условие
+        <span class="kx">\log_a b \geq 1 = \log_a a</span> равносильно
+        <span class="kx">(a-1)(b-a) \geq 0</span> при <span class="kx">a > 0,\ a \neq 1,\ b > 0</span>.
+        <div class="formula"><span class="kx">\begin{cases} (x-1-1)((x+2)-(x-1)) \geq 0 \\ x - 1 > 0,\ x-1 \neq 1 \\ x + 2 > 0 \end{cases}</span></div>
+        <span class="kx">(x-2)\cdot 3 \geq 0 \iff x \geq 2</span>, с учётом ОДЗ <span class="kx">x>1,\ x\neq 2</span>:
+        <strong>Ответ:</strong> <span class="kx">x > 2</span>.
+      </div>
+    </div>
+
+    <div class="task reveal">
+      <span class="task__num">Задание 16 · Кредит</span>
+      <div class="task__text">
+        <p>15 января взят кредит на 4 года под 25% годовых. Условия:</p>
+        <ul>
+          <li>каждый январь долг увеличивается на 25%;</li>
+          <li>с февраля по июнь платится часть долга;</li>
+          <li>каждый июль долг должен быть на одну и ту же сумму меньше долга предыдущего июля.</li>
+        </ul>
+        <p>Какую сумму нужно взять, чтобы общая выплата составила 8,5 млн руб?</p>
+      </div>
+      <div class="task__solution">
+        <strong>Решение.</strong> Пусть <span class="kx">S</span> — сумма кредита. После январских процентов долг последовательно: <span class="kx">1{,}25S,\ 0{,}75S \cdot 1{,}25,\ 0{,}5S \cdot 1{,}25,\ 0{,}25S \cdot 1{,}25</span>. Выплаты:
+        <div class="formula"><span class="kx">(1{,}25 - 0{,}75)S + (0{,}75\cdot1{,}25 - 0{,}5)S + (0{,}5\cdot1{,}25 - 0{,}25)S + 0{,}25\cdot1{,}25 S</span></div>
+        <span class="kx">= (0{,}5 + 0{,}4375 + 0{,}375 + 0{,}3125)S = 1{,}625S = 8{,}5</span>.
+        <strong>Ответ:</strong> <span class="kx">S \approx 5{,}23</span> млн руб.
+      </div>
+    </div>
+
+    <div class="task reveal">
+      <span class="task__num">Задание 18 · Параметр</span>
+      <div class="task__text">
+        <p>Найдите все значения <span class="kx">a</span>, при которых уравнение
+        <span class="kx">x^2 - 2ax + a^2 - 4 = 0</span> имеет корни, по модулю не превосходящие 3.</p>
+      </div>
+      <div class="task__solution">
+        <strong>Решение.</strong> Дискриминант
+        <span class="kx">D/4 = a^2 - (a^2-4) = 4 > 0</span> — корни
+        <span class="kx">x_{1,2} = a \pm 2</span>. Требуется
+        <span class="kx">|a-2| \leq 3</span> и <span class="kx">|a+2| \leq 3</span>:
+        <div class="formula"><span class="kx">-1 \leq a \leq 5 \quad \text{и} \quad -5 \leq a \leq 1</span></div>
+        Пересечение: <strong>Ответ:</strong> <span class="kx">a \in [-1;\ 1]</span>.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== УЧЕБНИКИ ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Литература</span>
+      <h2 class="section__title">Классические учебники и сборники</h2>
+      <p class="section__lead">Эти книги — школьный канон, по которым работают сильные учителя и репетиторы.</p>
+    </div>
+
+    <div class="books">
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #1e3a8a, #312e81);">
+            <small>учебник</small>
+            <strong>Алгебра и начала математического анализа · 11</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Алимов Ш. А. и др.</div>
+          <div class="book__author">Стандартный школьный учебник</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #7c2d12, #b45309);">
+            <small>учебник</small>
+            <strong>Алгебра и начала анализа · 10–11</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Мордкович А. Г.</div>
+          <div class="book__author">Углублённый уровень, два тома</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #064e3b, #047857);">
+            <small>геометрия</small>
+            <strong>Геометрия · 10–11</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Атанасян Л. С. и др.</div>
+          <div class="book__author">Канонический учебник стереометрии</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #831843, #be185d);">
+            <small>ЕГЭ профильный</small>
+            <strong>ЕГЭ. Математика. 36 типовых вариантов</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Ященко И. В. (ред.)</div>
+          <div class="book__author">Главный сборник вариантов от ФИПИ</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #1e40af, #0ea5e9);">
+            <small>задачник</small>
+            <strong>Сборник задач по математике для поступающих во втузы</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Сканави М. И.</div>
+          <div class="book__author">Легендарный задачник нескольких поколений</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #4c1d95, #7c3aed);">
+            <small>геометрия</small>
+            <strong>Геометрия. Планиметрия · 7–9</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Гордин Р. К.</div>
+          <div class="book__author">Глубокая планиметрия для сильных школьников</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #b91c1c, #ea580c);">
+            <small>задания 18–19</small>
+            <strong>ЕГЭ. Задачи с параметром и теория чисел</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Шестаков С. А., Захаров П. И.</div>
+          <div class="book__author">Самые сложные задачи второй части</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #0f172a, #334155);">
+            <small>классика</small>
+            <strong>Алгебра и начала анализа</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Виленкин Н. Я. и др.</div>
+          <div class="book__author">Углублённое изучение, физмат школы</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ИЗОБРАЖЕНИЯ ====== -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Шпаргалка в картинках</span>
+      <h2 class="section__title">Графики, формулы, фигуры</h2>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery__item gallery__item--wide" data-caption="Единичная тригонометрическая окружность">
+        <img src="images/Unit_circle.png" alt="Тригонометрическая окружность" style="background:#fff;" />
+      </div>
+      <div class="gallery__item" data-caption="Производная — наклон касательной">
+        <img src="images/Tangent.png" alt="Касательная" style="background:#fff;" />
+      </div>
+      <div class="gallery__item" data-caption="Парабола и её график">
+        <img src="images/Parabola.png" alt="Парабола" style="background:#fff;" />
+      </div>
+      <div class="gallery__item gallery__item--tall" data-caption="Конические сечения: эллипс, парабола, гипербола">
+        <img src="images/Conics.png" alt="Конические сечения" style="background:#fff;" />
+      </div>
+      <div class="gallery__item" data-caption="Параллелепипед — основной объект стереометрии">
+        <img src="images/Parallelepiped.png" alt="Параллелепипед" style="background:#fff;" />
+      </div>
+      <div class="gallery__item gallery__item--wide" data-caption="Площадь под кривой = определённый интеграл">
+        <img src="images/Integral.png" alt="Интеграл" style="background:#fff;" />
+      </div>
+      <div class="gallery__item" data-caption="Шар, вписанный в куб">
+        <img src="images/Sphere_in_cube.svg" alt="Шар в кубе" style="background:#fff;" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== СОВЕТЫ ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Стратегия</span>
+      <h2 class="section__title">Как готовиться к ЕГЭ</h2>
+    </div>
+
+    <div class="grid grid--3">
+      <div class="card reveal">
+        <div class="card__body" style="padding: 32px;">
+          <h3 class="card__title">1. Сначала база</h3>
+          <p class="card__text">Гарантированно решайте задания 1–12 — это половина первичного балла. Тренируйтесь до автоматизма: одна и та же арифметическая ошибка стоит балла.</p>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card__body" style="padding: 32px;">
+          <h3 class="card__title">2. Разбирайте, а не решайте</h3>
+          <p class="card__text">Один разобранный вариант с пониманием полезнее десяти прорешанных «в пустоту». Каждое непонятое место — повод изучить тему заново.</p>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card__body" style="padding: 32px;">
+          <h3 class="card__title">3. Полные варианты на время</h3>
+          <p class="card__text">За месяц до экзамена — не меньше одного полного варианта на 3 ч 55 мин в неделю. Учит распределять силы и контролировать время.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ПОЛЕЗНЫЕ РЕСУРСЫ ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Куда идти ещё</span>
+      <h2 class="section__title">Внешние ресурсы для подготовки</h2>
+    </div>
+    <div class="grid grid--2">
+      <a class="card reveal" href="https://fipi.ru" target="_blank" rel="noopener">
+        <div class="card__body" style="padding: 28px;">
+          <h3 class="card__title">ФИПИ — открытый банк</h3>
+          <p class="card__text">Официальные демоверсии, спецификация, кодификатор и открытый банк прототипов всех заданий ЕГЭ.</p>
+          <span class="card__cta">fipi.ru</span>
+        </div>
+      </a>
+      <a class="card reveal" href="https://mathege.ru" target="_blank" rel="noopener">
+        <div class="card__body" style="padding: 28px;">
+          <h3 class="card__title">Мат-ЕГЭ · MathEGE</h3>
+          <p class="card__text">Сайт И. В. Ященко — тренажёры, статистика по типовым задачам, расширенные сборники.</p>
+          <span class="card__cta">mathege.ru</span>
+        </div>
+      </a>
+      <a class="card reveal" href="https://ege.sdamgia.ru" target="_blank" rel="noopener">
+        <div class="card__body" style="padding: 28px;">
+          <h3 class="card__title">Решу ЕГЭ</h3>
+          <p class="card__text">Самый большой бесплатный тренажёр: тысячи задач, фильтры по темам, автопроверка коротких ответов.</p>
+          <span class="card__cta">ege.sdamgia.ru</span>
+        </div>
+      </a>
+      <a class="card reveal" href="https://shkolkovo.net" target="_blank" rel="noopener">
+        <div class="card__body" style="padding: 28px;">
+          <h3 class="card__title">Школково</h3>
+          <p class="card__text">Курсы и теория с пояснениями для каждого задания. Большой раздел задач с параметром.</p>
+          <span class="card__cta">shkolkovo.net</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <div class="brand">
+          <span class="brand__logo">∑</span>
+          <span>Мат<b style="color:var(--accent-2)">³</b></span>
+        </div>
+        <p class="footer__brand-text">
+          Образовательный портал по математике для выпускников. Свободные
+          материалы, ссылки на открытые источники, подборки книг и задач.
+        </p>
+        <p class="footer__brand-text" style="font-size:0.82rem; opacity:0.85; margin-top:10px;">
+          <b style="color:var(--text-2)">Мат³</b> — степень тройки: три автора, три раздела.<br/>
+          <span style="opacity:0.75">Евграфова · Файзрахманова · Никифорова</span>
+        </p>
+      </div>
+      <div class="footer__col">
+        <h4>Разделы</h4>
+        <ul>
+          <li><a href="school.html">Школа и ЕГЭ</a></li>
+          <li><a href="olympiad.html">Олимпиады</a></li>
+          <li><a href="popular.html">Популяризация</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Подготовка</h4>
+        <ul>
+          <li><a href="https://fipi.ru" target="_blank" rel="noopener">ФИПИ</a></li>
+          <li><a href="https://mathege.ru" target="_blank" rel="noopener">Мат-ЕГЭ</a></li>
+          <li><a href="https://ege.sdamgia.ru" target="_blank" rel="noopener">Решу ЕГЭ</a></li>
+          <li><a href="https://shkolkovo.net" target="_blank" rel="noopener">Школково</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Олимпиады</h4>
+        <ul>
+          <li><a href="https://olimpiada.ru" target="_blank" rel="noopener">Olimpiada.ru</a></li>
+          <li><a href="https://vos.olimpiada.ru" target="_blank" rel="noopener">ВсОШ</a></li>
+          <li><a href="https://olymp.hse.ru" target="_blank" rel="noopener">Высшая проба</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Мат³ · Образовательный портал</span>
+      <span>Изображения · Wikimedia Commons</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="script.js" defer></script>
+</body>
+</html>

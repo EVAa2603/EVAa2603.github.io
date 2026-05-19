@@ -1,0 +1,909 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Популяризация математики · Мат³</title>
+  <meta name="description" content="Просветительская математика: фракталы, парадоксы, бесконечности, великие открытия и нерешённые проблемы. Книги, каналы и лекции." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="brand">
+      <span class="brand__logo">∑</span>
+      <span>Мат<b style="color:var(--accent-2)">³</b></span>
+    </a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="school.html">Школа и ЕГЭ</a></li>
+      <li><a href="olympiad.html">Олимпиады</a></li>
+      <li><a href="popular.html" class="is-active">Популяризация</a></li>
+    </ul>
+    <div style="display:flex; gap:10px; align-items:center;">
+      <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">☾</button>
+      <button class="nav__burger" id="navBurger" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container hero__inner">
+    <div>
+      <span class="hero__eyebrow" style="color: var(--popular);">Раздел · популяризация</span>
+      <h1 class="hero__title">Почему математика — <span class="grad">самое странное</span> и красивое искусство человечества</h1>
+      <p class="hero__lead">
+        Здесь не нужно решать уравнения — здесь можно удивляться. Фракталы и
+        бесконечности, парадоксы и нерешённые проблемы, гениальные мысли и
+        картины — всё, что показывает: математика — не предмет, а способ
+        видеть мир.
+      </p>
+      <div class="hero__actions">
+        <a href="#mysteries" class="btn btn--primary">7 загадок тысячелетия</a>
+        <a href="#fractals" class="btn btn--ghost">Фракталы</a>
+        <a href="#books" class="btn btn--ghost">Что почитать</a>
+      </div>
+    </div>
+    <div class="hero__art reveal">
+      <img src="images/Mandelbrot_zoom.jpg" alt="Спутник множества Мандельброта" />
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7 ЗАГАДОК ===== -->
+<section class="section" id="mysteries">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Премия Института Клэя</span>
+      <h2 class="section__title">Семь задач тысячелетия</h2>
+      <p class="section__lead">
+        В 2000 году Институт Клэя объявил семь нерешённых математических задач — за
+        каждую обещан <b>миллион долларов</b>. Одну (гипотезу Пуанкаре) уже решил
+        Григорий Перельман — и отказался от премии. Остальные шесть до сих пор открыты.
+      </p>
+    </div>
+
+    <div class="grid grid--3">
+      <div class="card reveal">
+        <div class="card__media" style="background: linear-gradient(135deg, #047857, #0d9488); aspect-ratio: 16/8; display:grid; place-items:center;">
+          <span style="font-size: 4rem; color:white;">✓</span>
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Гипотеза Пуанкаре</h3>
+          <p class="card__text">
+            <i>Решена в 2003 г. Г. Перельманом.</i> Каждая односвязная компактная
+            трёхмерная многообразие без края гомеоморфно трёхмерной сфере.
+            На обывательском языке: если объект можно непрерывно стянуть в точку,
+            он — «3-сфера».
+          </p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media" style="background: linear-gradient(135deg, #6d28d9, #db2777); aspect-ratio: 16/8; display:grid; place-items:center;">
+          <span style="font-family:'Source Serif Pro'; font-size: 3.5rem; color: white;">ζ</span>
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Гипотеза Римана</h3>
+          <p class="card__text">
+            Все нетривиальные нули дзета-функции Римана имеют вещественную часть
+            <span class="kx">\tfrac{1}{2}</span>. От её доказательства зависит «правильное»
+            распределение простых чисел. Главная нерешённая задача математики.
+          </p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media" style="background: linear-gradient(135deg, #1d4ed8, #0ea5e9); aspect-ratio: 16/8; display:grid; place-items:center;">
+          <span style="font-family:'Source Serif Pro'; font-size: 3.5rem; color: white;">P=NP?</span>
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">P против NP</h3>
+          <p class="card__text">
+            Если решение задачи можно <i>проверить</i> быстро — можно ли её и
+            <i>найти</i> быстро? Если P=NP, рухнут все криптосистемы. Большинство
+            математиков считает, что P≠NP, но никто не доказал.
+          </p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media" style="background: linear-gradient(135deg, #b45309, #ef4444); aspect-ratio: 16/8; display:grid; place-items:center;">
+          <span style="font-family:'Source Serif Pro'; font-size: 3rem; color: white;">∇·u=0</span>
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Существование и гладкость решений Навье–Стокса</h3>
+          <p class="card__text">
+            Уравнения, описывающие движение жидкостей. Доказать, что в трёхмерном случае
+            решения всегда существуют и не «взрываются» за конечное время — никто пока не смог.
+          </p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media" style="background: linear-gradient(135deg, #4338ca, #0891b2); aspect-ratio: 16/8; display:grid; place-items:center;">
+          <span style="font-family:'Source Serif Pro'; font-size: 3rem; color: white;">Yang–Mills</span>
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Теория Янга–Миллса и массовая щель</h3>
+          <p class="card__text">
+            Математически строго описать неабелевы калибровочные теории и доказать
+            наличие «массовой щели» — фундамент квантовой теории поля. Связь с физикой
+            элементарных частиц.
+          </p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media" style="background: linear-gradient(135deg, #166534, #65a30d); aspect-ratio: 16/8; display:grid; place-items:center;">
+          <span style="font-family:'Source Serif Pro'; font-size: 3rem; color: white;">L(E,1)</span>
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Гипотеза Бёрча–Свиннертон-Дайера</h3>
+          <p class="card__text">
+            Связывает количество рациональных точек на эллиптической кривой с
+            поведением её L-функции. Доказана в малых случаях, общая
+            формулировка открыта.
+          </p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media" style="background: linear-gradient(135deg, #831843, #c026d3); aspect-ratio: 16/8; display:grid; place-items:center;">
+          <span style="font-family:'Source Serif Pro'; font-size: 3rem; color: white;">Hodge</span>
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Гипотеза Ходжа</h3>
+          <p class="card__text">
+            Каждый класс Ходжа на гладкой проективной алгебраической многообразии
+            является рациональной линейной комбинацией классов алгебраических циклов.
+            Самая «непереводимая» из задач тысячелетия.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ФРАКТАЛЫ ===== -->
+<section class="section" id="fractals">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Бесконечность в малом</span>
+      <h2 class="section__title">Фракталы — самая красивая математика</h2>
+      <p class="section__lead">
+        Объекты, в которых часть подобна целому. Бенуа Мандельброт назвал их
+        фракталами в 1975 году. Они скрывают невероятную сложность в простых формулах.
+      </p>
+    </div>
+
+    <div class="feature-card reveal">
+      <div class="feature-card__media">
+        <img src="images/Mandelbrot.jpg" alt="Множество Мандельброта" />
+      </div>
+      <div class="feature-card__body">
+        <span class="section__eyebrow">Множество Мандельброта</span>
+        <h3>Простая формула — бесконечная сложность</h3>
+        <p>
+          Берётся число <span class="kx">c</span> и проверяется, остаётся ли последовательность
+          <span class="kx">z_{n+1} = z_n^2 + c,\ z_0 = 0</span> ограниченной. Точки, для которых
+          она ограничена, — это и есть множество Мандельброта. Граница этого
+          множества — фрактал с бесконечно тонкой структурой.
+        </p>
+        <div class="formula"><span class="formula__label">Итерационная формула</span><span class="kx">z_{n+1} = z_n^2 + c</span></div>
+        <p>
+          В любой части границы есть копии всего множества — это и есть свойство <b>самоподобия</b>.
+        </p>
+      </div>
+    </div>
+
+    <div class="gallery" style="margin-top: 50px;">
+      <div class="gallery__item gallery__item--wide" data-caption="Множество Жюлиа — родственник Мандельброта">
+        <img src="images/Julia_set.jpg" alt="Множество Жюлиа" />
+      </div>
+      <div class="gallery__item" data-caption="Треугольник Серпинского — фрактал из треугольников">
+        <img src="images/Sierpinski.png" alt="Треугольник Серпинского" style="background:#fff;" />
+      </div>
+      <div class="gallery__item gallery__item--tall" data-caption="Снежинка Коха — бесконечный периметр, конечная площадь">
+        <img src="images/Koch.png" alt="Снежинка Коха" style="background:#fff;" />
+      </div>
+      <div class="gallery__item" data-caption="Папоротник Барнсли — фрактал, похожий на лист папоротника">
+        <img src="images/Barnsley_fern.png" alt="Папоротник Барнсли" />
+      </div>
+      <div class="gallery__item" data-caption="Глубокое погружение в множество Мандельброта">
+        <img src="images/Mandelbrot_zoom.jpg" alt="Mandelbrot zoom" />
+      </div>
+      <div class="gallery__item gallery__item--wide" data-caption="Ковёр Серпинского — двумерный аналог канторова множества">
+        <img src="images/Sierpinski_carpet.png" alt="Ковёр Серпинского" style="background:#fff;" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ПАРАДОКСЫ ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Когда здравый смысл подводит</span>
+      <h2 class="section__title">Парадоксы и контринтуитивные идеи</h2>
+      <p class="section__lead">
+        Парадокс — это идея, которая кажется ложной, но математически верна.
+        Они показывают границы нашей интуиции.
+      </p>
+    </div>
+
+    <div class="grid grid--2">
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Banach_Tarski.png" alt="Парадокс Банаха-Тарского" style="background:#fff; padding: 30px;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Парадокс Банаха–Тарского</h3>
+          <p class="card__text">
+            Шар в трёхмерном пространстве можно разрезать на конечное число
+            частей и без растяжений собрать из них <b>два таких же шара</b>. Это
+            не фокус, а строгая теорема — она опирается на аксиому выбора и
+            показывает, что обычные понятия объёма и меры в общем случае не работают.
+          </p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Hilbert_curve.png" alt="Кривая Гильберта" style="background:#fff; padding: 20px;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Кривая, заполняющая квадрат</h3>
+          <p class="card__text">
+            В 1890 году Пеано нашёл непрерывную кривую, проходящую через <i>все</i>
+            точки квадрата. Кривая — одномерна, квадрат — двумерен, но через
+            предельный переход кривая «заполняет» площадь. Урок: измерения — не
+            то, чем кажутся.
+          </p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Goedel.jpg" alt="Курт Гёдель" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Теоремы Гёделя о неполноте</h3>
+          <p class="card__text">
+            В любой достаточно богатой формальной системе (например, в обычной
+            арифметике) <b>существуют истинные утверждения, которые невозможно
+            доказать средствами этой системы.</b> Удар по программе Гильберта —
+            мечте о полной формализации математики.
+          </p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Hilbert_paradox.png" alt="Отель Гильберта" style="background:#fff; padding: 30px;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Отель Гильберта</h3>
+          <p class="card__text">
+            В отеле бесконечно много номеров, все заняты. Заселите ещё одного гостя?
+            Переселите гостя из номера <span class="kx">n</span> в номер <span class="kx">n+1</span> —
+            и номер 1 свободен. <i>Бесконечность плюс один — это та же бесконечность.</i>
+            А можно ли заселить бесконечно много новых гостей? Да: пересадите
+            каждого из номера <span class="kx">n</span> в номер <span class="kx">2n</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== КРАСИВЫЕ ОБЪЕКТЫ ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Просто красиво</span>
+      <h2 class="section__title">Топология, симметрии, поверхности</h2>
+    </div>
+
+    <div class="grid grid--3">
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Mobius.jpg" alt="Лента Мёбиуса" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Лента Мёбиуса</h3>
+          <p class="card__text">
+            Возьмите полоску бумаги, перекрутите один конец на 180° и склейте.
+            У получившейся ленты только <b>одна сторона</b> и <b>один край</b>.
+            Если разрезать её вдоль середины — получится не две ленты, а одна,
+            вдвое длиннее.
+          </p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Klein.png" alt="Бутылка Клейна" style="background:#fff; padding: 30px;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Бутылка Клейна</h3>
+          <p class="card__text">
+            Поверхность без границы, у которой <b>нет внутри и снаружи</b>.
+            В нашем трёхмерном пространстве её можно изобразить только с
+            самопересечением — настоящий «правильный» вид требует четырёх измерений.
+          </p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Tesseract.gif" alt="Тессеракт" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Тессеракт — куб в 4D</h3>
+          <p class="card__text">
+            4-мерный аналог куба. Мы не можем его увидеть, но можем посмотреть
+            на «тень» — проекцию в 3D. У тессеракта <b>16 вершин, 32 ребра, 24
+            грани и 8 трёхмерных кубических ячеек.</b>
+          </p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Golden.png" alt="Золотое сечение" style="background:#fff; padding: 30px;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Золотое сечение</h3>
+          <p class="card__text">
+            Число <span class="kx">\varphi = \tfrac{1+\sqrt{5}}{2} \approx 1{,}618</span>. Встречается в
+            пропорциях Парфенона, картинах эпохи Возрождения, раковинах моллюсков
+            и спиралях галактик. Удовлетворяет уникальному уравнению <span class="kx">\varphi^2 = \varphi + 1</span>.
+          </p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Nautilus.png" alt="Спираль наутилуса" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Числа Фибоначчи в природе</h3>
+          <p class="card__text">
+            Последовательность 1, 1, 2, 3, 5, 8, 13, 21… в которой каждое число —
+            сумма двух предыдущих. Отношение соседних членов стремится к
+            золотому сечению. Лепестки, шишки, спирали ракушек, ананасы —
+            всё держится на ней.
+          </p>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card__media">
+          <img src="images/Penrose.png" alt="Мозаика Пенроуза" style="background:#fff;" />
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Мозаика Пенроуза</h3>
+          <p class="card__text">
+            Покрытие плоскости двумя видами ромбов — <b>без периодичности</b>.
+            Считалось, что такое невозможно, пока Роджер Пенроуз не показал
+            обратное в 1974 году. Позднее в природе обнаружили квазикристаллы с похожей структурой.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ВЕЛИКИЕ МАТЕМАТИКИ ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Лица математики</span>
+      <h2 class="section__title">Великие математики разных эпох</h2>
+    </div>
+
+    <div class="persons">
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Archimedes.jpg" alt="Архимед" />
+        </div>
+        <div class="person__name">Архимед</div>
+        <div class="person__years">287–212 до н. э.</div>
+        <div class="person__quote">«Дайте мне точку опоры, и я переверну Землю». Заложил основы интегрального исчисления за 2000 лет до Ньютона.</div>
+      </div>
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Newton.jpg" alt="Исаак Ньютон" />
+        </div>
+        <div class="person__name">Исаак Ньютон</div>
+        <div class="person__years">1643–1727</div>
+        <div class="person__quote">Изобрёл дифференциальное и интегральное исчисление параллельно с Лейбницем. Описал движение в терминах математики.</div>
+      </div>
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Leibniz.jpg" alt="Лейбниц" />
+        </div>
+        <div class="person__name">Готфрид Лейбниц</div>
+        <div class="person__years">1646–1716</div>
+        <div class="person__quote">Дал нам обозначения <span class="kx">dx,\ \int</span>, которые мы используем до сих пор. Считал мир «лучшим из возможных».</div>
+      </div>
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Euler.jpg" alt="Эйлер" />
+        </div>
+        <div class="person__name">Леонард Эйлер</div>
+        <div class="person__years">1707–1783</div>
+        <div class="person__quote">Связал пять важнейших констант мира одним равенством: <span class="kx">e^{i\pi}+1=0</span>.</div>
+      </div>
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Gauss.jpg" alt="Гаусс" />
+        </div>
+        <div class="person__name">Карл Фридрих Гаусс</div>
+        <div class="person__years">1777–1855</div>
+        <div class="person__quote">В 7 лет сложил все числа от 1 до 100 за минуту. Создал современную теорию чисел.</div>
+      </div>
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Lobachevsky.jpg" alt="Лобачевский" />
+        </div>
+        <div class="person__name">Николай Лобачевский</div>
+        <div class="person__years">1792–1856</div>
+        <div class="person__quote">«Коперник геометрии». Создал неевклидову геометрию, доказав, что аксиома о параллельных — не догма.</div>
+      </div>
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Kovalevskaya.jpg" alt="Ковалевская" />
+        </div>
+        <div class="person__name">Софья Ковалевская</div>
+        <div class="person__years">1850–1891</div>
+        <div class="person__quote">Первая женщина — профессор математики в Европе. Знаменита работами по теории дифференциальных уравнений.</div>
+      </div>
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Hilbert.jpg" alt="Гильберт" />
+        </div>
+        <div class="person__name">Давид Гильберт</div>
+        <div class="person__years">1862–1943</div>
+        <div class="person__quote">В 1900 году сформулировал 23 проблемы, которые задали направление развития математики XX века.</div>
+      </div>
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Poincare.jpg" alt="Пуанкаре" />
+        </div>
+        <div class="person__name">Анри Пуанкаре</div>
+        <div class="person__years">1854–1912</div>
+        <div class="person__quote">«Последний универсал». Один из создателей топологии, теории динамических систем, специальной теории относительности.</div>
+      </div>
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Kolmogorov.svg" alt="Колмогоров" />
+        </div>
+        <div class="person__name">Андрей Колмогоров</div>
+        <div class="person__years">1903–1987</div>
+        <div class="person__quote">Аксиоматизировал теорию вероятностей. Основатель советской математической школы и школы-интерната №18 при МГУ.</div>
+      </div>
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Perelman.jpg" alt="Перельман" />
+        </div>
+        <div class="person__name">Григорий Перельман</div>
+        <div class="person__years">р. 1966</div>
+        <div class="person__quote">Доказал гипотезу Пуанкаре. Отказался от медали Филдса и миллиона долларов: «Я не герой математики».</div>
+      </div>
+      <div class="person reveal">
+        <div class="person__photo">
+          <img src="images/Tao.svg" alt="Тао" />
+        </div>
+        <div class="person__name">Теренс Тао</div>
+        <div class="person__years">р. 1975</div>
+        <div class="person__quote">Лауреат медали Филдса 2006 года. Известен работами по теории чисел, анализу, эргодической теории.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ЛЕНТА ВРЕМЕНИ ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Эпохи</span>
+      <h2 class="section__title">Краткая хронология математики</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline__item reveal">
+        <div class="timeline__year">≈ 3000 до н. э.</div>
+        <div class="timeline__title">Вавилон и Египет</div>
+        <div class="timeline__text">Первые арифметические тексты, шестидесятеричная система счисления, площади и объёмы.</div>
+      </div>
+      <div class="timeline__item reveal">
+        <div class="timeline__year">≈ 300 до н. э.</div>
+        <div class="timeline__title">Евклид и «Начала»</div>
+        <div class="timeline__text">13 книг — фундамент геометрии и аксиоматического метода на 2000 лет вперёд.</div>
+      </div>
+      <div class="timeline__item reveal">
+        <div class="timeline__year">820</div>
+        <div class="timeline__title">Аль-Хорезми</div>
+        <div class="timeline__text">«Книга восстановления и противопоставления» — рождение алгебры. От его имени — слово «алгоритм».</div>
+      </div>
+      <div class="timeline__item reveal">
+        <div class="timeline__year">1202</div>
+        <div class="timeline__title">Леонардо Пизанский (Фибоначчи)</div>
+        <div class="timeline__text">«Книга абака» вводит в Европу индо-арабские цифры. Знаменитая задача о кроликах.</div>
+      </div>
+      <div class="timeline__item reveal">
+        <div class="timeline__year">1637</div>
+        <div class="timeline__title">Декарт</div>
+        <div class="timeline__text">«Геометрия» — координатный метод. Алгебра и геометрия становятся одной наукой.</div>
+      </div>
+      <div class="timeline__item reveal">
+        <div class="timeline__year">1666–1684</div>
+        <div class="timeline__title">Ньютон и Лейбниц</div>
+        <div class="timeline__text">Дифференциальное и интегральное исчисление. Математика обретает инструмент описывать движение и изменение.</div>
+      </div>
+      <div class="timeline__item reveal">
+        <div class="timeline__year">1826</div>
+        <div class="timeline__title">Лобачевский</div>
+        <div class="timeline__text">Доклад «О началах геометрии» — рождение неевклидовой геометрии и плюрализма геометрий.</div>
+      </div>
+      <div class="timeline__item reveal">
+        <div class="timeline__year">1874</div>
+        <div class="timeline__title">Кантор</div>
+        <div class="timeline__text">Теория множеств. Существуют бесконечности разной мощности — счётная и континуум.</div>
+      </div>
+      <div class="timeline__item reveal">
+        <div class="timeline__year">1931</div>
+        <div class="timeline__title">Гёдель</div>
+        <div class="timeline__text">Теоремы о неполноте арифметики. Математика не может быть полностью формализована.</div>
+      </div>
+      <div class="timeline__item reveal">
+        <div class="timeline__year">1994</div>
+        <div class="timeline__title">Эндрю Уайлс</div>
+        <div class="timeline__text">Доказательство Великой теоремы Ферма — спустя 357 лет после её формулировки.</div>
+      </div>
+      <div class="timeline__item reveal">
+        <div class="timeline__year">2003</div>
+        <div class="timeline__title">Перельман</div>
+        <div class="timeline__text">Доказательство гипотезы Пуанкаре. Первая решённая задача тысячелетия.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== КНИГИ ===== -->
+<section class="section" id="books">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Что почитать</span>
+      <h2 class="section__title">Книги о математике для всех</h2>
+      <p class="section__lead">Эти книги читаются как приключенческие романы — даже если вы пока не любите формулы.</p>
+    </div>
+
+    <div class="books">
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #b45309, #f59e0b);">
+            <small>классика</small>
+            <strong>Занимательная алгебра</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Я. И. Перельман</div>
+          <div class="book__author">Самый знаменитый популяризатор математики</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #047857, #10b981);">
+            <small>МЦНМО</small>
+            <strong>Математическая составляющая</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Тихомиров, Калинин и др.</div>
+          <div class="book__author">Сборник статей о математике в науке и культуре</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #6d28d9, #a855f7);">
+            <small>головоломки</small>
+            <strong>Математические головоломки и развлечения</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Мартин Гарднер</div>
+          <div class="book__author">Колонки из Scientific American — золотой стандарт</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #1e40af, #3b82f6);">
+            <small>фундамент</small>
+            <strong>Что такое математика?</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Курант, Роббинс</div>
+          <div class="book__author">Лучшее введение в математику для умного школьника</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #be185d, #ec4899);">
+            <small>история</small>
+            <strong>Великая теорема Ферма</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Саймон Сингх</div>
+          <div class="book__author">357 лет погони за доказательством</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #0f766e, #06b6d4);">
+            <small>биография</small>
+            <strong>Идеальная строгость. Гениальный математик и величайшая загадка века</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Маша Гессен</div>
+          <div class="book__author">О Григории Перельмане и доказательстве Пуанкаре</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #7c2d12, #ea580c);">
+            <small>лекции</small>
+            <strong>Математика для гуманитариев</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Алексей Савватеев</div>
+          <div class="book__author">Цикл лекций «живой» математики</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #1e3a8a, #4338ca);">
+            <small>классика</small>
+            <strong>В мире чисел</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">А. И. Маркушевич</div>
+          <div class="book__author">Очерк теории чисел для широкого читателя</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #831843, #f43f5e);">
+            <small>популяризация</small>
+            <strong>Удовольствие от X</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Стивен Строгац</div>
+          <div class="book__author">Путешествие по математике от азов к гипотезе Римана</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #0c4a6e, #0284c7);">
+            <small>сборник</small>
+            <strong>Математическая смесь</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Джон Литлвуд</div>
+          <div class="book__author">Анекдоты и афоризмы английского математика</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #14532d, #16a34a);">
+            <small>кружок</small>
+            <strong>Математический кружок: 6–7 классы</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Спивак А. В.</div>
+          <div class="book__author">Идеи олимпиадной математики простым языком</div>
+        </div>
+      </article>
+
+      <article class="book reveal">
+        <div class="book__cover">
+          <div class="book__cover-text" style="background: linear-gradient(135deg, #581c87, #9333ea);">
+            <small>визуально</small>
+            <strong>Наглядная геометрия и топология</strong>
+          </div>
+        </div>
+        <div class="book__body">
+          <div class="book__title">Д. Гильберт, С. Кон-Фоссен</div>
+          <div class="book__author">Классическое введение в современную геометрию</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== КАНАЛЫ И ЛЕКЦИИ ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">Смотреть и слушать</span>
+      <h2 class="section__title">Каналы, подкасты и лекции</h2>
+      <p class="section__lead">
+        Хорошее видео иногда заменяет учебник. Эти каналы — must-watch для всех,
+        кому интересна математика.
+      </p>
+    </div>
+
+    <div class="grid grid--3">
+      <a href="https://www.youtube.com/@3blue1brown" target="_blank" rel="noopener" class="card reveal">
+        <div class="card__media" style="background: linear-gradient(135deg, #1e293b, #0f172a); aspect-ratio: 16/9; display:grid; place-items:center;">
+          <span style="font-family:'Source Serif Pro'; color:#38bdf8; font-size: 3rem;">3Blue1Brown</span>
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">3Blue1Brown</h3>
+          <p class="card__text">Грант Сандерсон. Анимированные ролики о линейной алгебре, матанализе, теории чисел, нейросетях. Образец визуальной математики.</p>
+          <span class="card__cta">YouTube</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@numberphile" target="_blank" rel="noopener" class="card reveal">
+        <div class="card__media" style="background: linear-gradient(135deg, #b91c1c, #fb923c); aspect-ratio: 16/9; display:grid; place-items:center;">
+          <span style="font-family:'Source Serif Pro'; color:white; font-size: 3rem;">Numberphile</span>
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Numberphile</h3>
+          <p class="card__text">Интервью с математиками со всего мира, от теории чисел до парадоксов, фракталов и нерешённых задач.</p>
+          <span class="card__cta">YouTube</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@savvateev" target="_blank" rel="noopener" class="card reveal">
+        <div class="card__media" style="background: linear-gradient(135deg, #14532d, #84cc16); aspect-ratio: 16/9; display:grid; place-items:center;">
+          <span style="font-family:'Source Serif Pro'; color:white; font-size: 2.4rem; padding: 0 12px; text-align:center;">Алексей Савватеев</span>
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Алексей Савватеев</h3>
+          <p class="card__text">Лекции «100 уроков математики» и «100 уроков о Боге и науке», лекции на канале «Маткружок».</p>
+          <span class="card__cta">YouTube · постнаука</span>
+        </div>
+      </a>
+      <a href="https://postnauka.org" target="_blank" rel="noopener" class="card reveal">
+        <div class="card__media" style="background: linear-gradient(135deg, #0f172a, #1e3a8a); aspect-ratio: 16/9; display:grid; place-items:center;">
+          <span style="font-family:'Source Serif Pro'; color:white; font-size: 3rem;">ПостНаука</span>
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">ПостНаука</h3>
+          <p class="card__text">Российская видео-энциклопедия учёных: математика, физика, биология. Короткие лекции по 10–20 минут.</p>
+          <span class="card__cta">postnauka.org</span>
+        </div>
+      </a>
+      <a href="https://www.etudes.ru" target="_blank" rel="noopener" class="card reveal">
+        <div class="card__media" style="background: linear-gradient(135deg, #581c87, #d946ef); aspect-ratio: 16/9; display:grid; place-items:center;">
+          <span style="font-family:'Source Serif Pro'; color:white; font-size: 2.6rem;">Математические этюды</span>
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Etudes.ru</h3>
+          <p class="card__text">Анимации Николая Андреева: вращающиеся механизмы Чебышёва, теорема Пифагора в движении, геометрия. Очень русский, очень красивый сайт.</p>
+          <span class="card__cta">etudes.ru</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@mathematician" target="_blank" rel="noopener" class="card reveal">
+        <div class="card__media" style="background: linear-gradient(135deg, #831843, #f472b6); aspect-ratio: 16/9; display:grid; place-items:center;">
+          <span style="font-family:'Source Serif Pro'; color:white; font-size: 2.8rem;">Mathologer</span>
+        </div>
+        <div class="card__body">
+          <h3 class="card__title">Mathologer</h3>
+          <p class="card__text">Бурхард Польстер — австралийский математик с австрийским юмором. Глубокие, но понятные ролики о красивых теоремах.</p>
+          <span class="card__cta">YouTube</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ЦИТАТА ===== -->
+<section class="section">
+  <div class="container">
+    <div class="quote reveal">
+      Математика — это не о числах, уравнениях или алгоритмах. Это о том,
+      как понять.
+      <span class="quote__author">— Уильям Пол Тёрстон, медалист Филдса</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section">
+  <div class="container">
+    <div class="cta reveal">
+      <div>
+        <span class="section__eyebrow">Идти дальше</span>
+        <h2 class="mt-0">Если вам это интересно — попробуйте олимпиадные задачи</h2>
+        <p>Олимпиадная математика — естественное продолжение популярной: те же красивые идеи, но теперь вы их применяете сами.</p>
+      </div>
+      <div style="display:flex; flex-direction: column; gap: 12px;">
+        <a href="olympiad.html" class="btn btn--primary">К олимпиадам</a>
+        <a href="school.html" class="btn btn--ghost">К школьному курсу</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <div class="brand">
+          <span class="brand__logo">∑</span>
+          <span>Мат<b style="color:var(--accent-2)">³</b></span>
+        </div>
+        <p class="footer__brand-text">
+          Образовательный портал по математике для выпускников. Свободные
+          материалы, ссылки на открытые источники, подборки книг и задач.
+        </p>
+        <p class="footer__brand-text" style="font-size:0.82rem; opacity:0.85; margin-top:10px;">
+          <b style="color:var(--text-2)">Мат³</b> — степень тройки: три автора, три раздела.<br/>
+          <span style="opacity:0.75">Евграфова · Файзрахманова · Никифорова</span>
+        </p>
+      </div>
+      <div class="footer__col">
+        <h4>Разделы</h4>
+        <ul>
+          <li><a href="school.html">Школа и ЕГЭ</a></li>
+          <li><a href="olympiad.html">Олимпиады</a></li>
+          <li><a href="popular.html">Популяризация</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Каналы</h4>
+        <ul>
+          <li><a href="https://www.youtube.com/@3blue1brown" target="_blank" rel="noopener">3Blue1Brown</a></li>
+          <li><a href="https://www.youtube.com/@numberphile" target="_blank" rel="noopener">Numberphile</a></li>
+          <li><a href="https://postnauka.org" target="_blank" rel="noopener">ПостНаука</a></li>
+          <li><a href="https://www.etudes.ru" target="_blank" rel="noopener">Математические этюды</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Книжные ссылки</h4>
+        <ul>
+          <li><a href="https://biblio.mccme.ru" target="_blank" rel="noopener">МЦНМО · библиотека</a></li>
+          <li><a href="https://elibrary.ru" target="_blank" rel="noopener">eLibrary</a></li>
+          <li><a href="https://ru.wikipedia.org/wiki/Категория:Математика" target="_blank" rel="noopener">Вики · математика</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Мат³ · Образовательный портал</span>
+      <span>Изображения · Wikimedia Commons</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="script.js" defer></script>
+</body>
+</html>
